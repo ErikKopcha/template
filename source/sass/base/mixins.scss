@@ -23,3 +23,14 @@
     color: $color-active;
   }
 }
+
+@mixin item-centered {
+  display: flex;
+  align-items: center;
+}
+
+@mixin full-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

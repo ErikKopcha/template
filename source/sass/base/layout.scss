@@ -42,7 +42,7 @@ a {
 }
 
 ul li {
-  list-style: none;
+  @include reset-list;
 }
 
 ::placeholder {
