@@ -1,14 +1,14 @@
 ## Установка
 
 * установите [NodeJS](https://nodejs.org/en/) (если требуется) и npm
-* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/ErikKopcha/starting-template.git```
+* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/ErikKopcha/template-lite.git```
 * установите ```gulp``` глобально: ```npm i -g gulp gulp-cli```
 * перейдите в скачанную папку со сборкой: ```cd starting-template```
 * скачайте необходимые зависимости: ```npm i```
 * чтобы начать работу, введите команду: ```npm start```
 * чтобы собрать проект, введите команду ```npm run build```
 
-* Папка ```dev``` - используется во время разработки
+* Папка ```source``` - используется во время разработки
 
 ## Команды
 
