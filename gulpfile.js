@@ -33,37 +33,39 @@ gulp.task('sass', function() {
   return gulp.src('source/sass/style.scss')
   .pipe(sass())
   .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-  .pipe(csso())
-  .pipe(rename({suffix: '.min'}))
+  // .pipe(csso())
+  // .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('source/js/main.js')
-  .pipe(concat('main.js'))
+  return gulp.src('source/js/*.js')
+  // .pipe(concat('main.js'))
   // .pipe(uglify())
   .pipe(gulp.dest('build/js'))
   .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('image', function() {
-  return gulp.src('source/img/**/*')
+  return gulp.src('source/images/**/*')
   .pipe(imagemin({
     interlaced: true,
     progressive: true,
     svgoPlugins: [{removeViewBox: false}]
   }))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/images'));
 });
 
 gulp.task('copy', function() {
   return gulp.src([
-    'source/fonts/**/*'
+    'source/fonts/**/*',
+    'source/icons/**/*'
   ], {
     base: 'source'
   })
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('build'))
+  .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('clear', function (callback) {
@@ -81,6 +83,8 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
   gulp.watch('source/*.html', gulp.parallel('html'));
+  gulp.watch('source/icons/**/*', gulp.parallel('copy'));
+  gulp.watch('source/images/**/*', gulp.parallel('image'));
   gulp.watch('source/sass/**/*.scss', gulp.parallel('sass'));
   gulp.watch('source/js/**/*.js', gulp.parallel('scripts'));
 });

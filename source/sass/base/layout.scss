@@ -109,7 +109,7 @@ i {
 
 // developer mode modal information
 .dev-modal {
-  @include centered;
+  @include center;
 
   transform: translateY(-100%);
   justify-content: center;
@@ -126,7 +126,7 @@ i {
   z-index: 9999;
 
   div {
-    @include centered;
+    @include center;
 
     justify-content: center;
     flex-direction: column;
@@ -145,7 +145,7 @@ i {
 
 // scroll to top button
 .scroll-top-btn {
-  @include centered;
+  @include center;
 
   justify-content: center;
   position: absolute;
