@@ -1,7 +1,7 @@
 ## Установка
 
 * установите [NodeJS](https://nodejs.org/en/) (если требуется) и npm
-* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/ErikKopcha/template-lite.git```
+* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/ErikKopcha/template.git```
 * установите ```gulp``` глобально: ```npm i -g gulp gulp-cli```
 * перейдите в скачанную папку со сборкой: ```cd template-lite```
 * скачайте необходимые зависимости: ```npm i```
@@ -13,4 +13,4 @@
 ## Команды
 
 * ```npm run build``` - собрать проект с оптимизацией без запуска сервера
-* ```npm start``` - собрать проект с оптимизацией и запуском сервера
+* ```npm start``` - собрать проект с запуском сервера

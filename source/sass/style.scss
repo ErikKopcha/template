@@ -1,5 +1,26 @@
-// Base imports
-// @import "../../node_modules/normalize.scss/normalize";
 @import "base/mixins";
 @import "base/variables.scss";
 @import "base/layout";
+
+// Blocks imports
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";
+
+.display-n {
+    display: none !important;
+}
+
+.display-f {
+    display: flex;
+}
+
+.align-i-c {
+    align-items: center;
+}
+
+.justify-c-c {
+    justify-content: center;
+}
+
+
