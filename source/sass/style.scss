@@ -7,19 +7,19 @@
 @import "blocks/main";
 @import "blocks/footer";
 
-.display-n {
+.d-none {
     display: none !important;
 }
 
-.display-f {
+.d-flex {
     display: flex;
 }
 
-.align-i-c {
+.align-center {
     align-items: center;
 }
 
-.justify-c-c {
+.justify-center {
     justify-content: center;
 }
 
